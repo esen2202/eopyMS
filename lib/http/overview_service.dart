@@ -4,8 +4,7 @@ import 'package:eopy_management_system/models/overview.dart';
 import 'package:http/http.dart' as http;
 
 class OverviewService extends HttpBaseService {
-  final String _serviceUrl = '192.168.0.108:8080';
-
+  final String _serviceUrl = HttpBaseService.serviceUrl;
   Future<Overview> getOverview() async {
     var uri = Uri.http(_serviceUrl, "order/getOverview");
     final response = await http.get(uri).timeout(new Duration(seconds: 5));

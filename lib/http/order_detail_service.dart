@@ -3,8 +3,8 @@ import 'package:eopy_management_system/http/http_base_service.dart';
 import 'package:eopy_management_system/models/order_detail.dart';
 import 'package:http/http.dart' as http;
 
-class OrderDetailService extends HttpBaseService {
-  String _serviceUrl = '192.168.0.108:8080';
+class OrderDetailService {
+  final String _serviceUrl = HttpBaseService.serviceUrl;
 
 //Get -> OrderDetails/{orderId}
   Future<List<OrderDetail>> getOrderDetails(int orderId) async {

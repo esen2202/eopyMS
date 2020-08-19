@@ -4,7 +4,7 @@ import 'package:eopy_management_system/models/stock_barcode.dart';
 import 'package:http/http.dart' as http;
 
 class StockService extends HttpBaseService {
-  final String _serviceUrl = '192.168.0.108:8080';
+  final String _serviceUrl = HttpBaseService.serviceUrl;
 
   //Get -> Order/GetStock/{barcode}
   Future<StockBarcode> getStock(String barcode) async {

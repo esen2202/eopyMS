@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'http_base_service.dart';
 
 class OrderService extends HttpBaseService {
-  final String _serviceUrl = '192.168.0.108:8080';
+  final String _serviceUrl = HttpBaseService.serviceUrl;
 
 //Get -> Order/GetOrders
   Future<List<Order>> getOrders() async {
